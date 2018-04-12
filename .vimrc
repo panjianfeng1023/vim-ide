@@ -36,31 +36,6 @@ let g:tagbar_sort=0
 let g:tagbar_compact=1
 let g:tagbar_foldlevel=1
 let g:tagbar_iconchars=['+', '-']
-let OmniCpp_SelectFirstItem = 2
-let OmniCpp_ShowPrototypeInAbbr = 1 
-let OmniCpp_MayCompleteScope = 1
-
-func! Turntabstop()
-
-    let tablength = &tabstop
-    if tablength == 1
-        set tabstop=2
-        set softtabstop=2
-        set shiftwidth=2
-    elseif tablength==2
-        set tabstop=4
-        set softtabstop=4
-        set shiftwidth=4
-    elseif tablength==4
-        set tabstop=8
-        set softtabstop=8
-        set shiftwidth=8
-    elseif tablength==8
-        set tabstop=1
-        set softtabstop=1
-        set shiftwidth=1
-    endif
-endfunc
 
 "file list
 map <silent> <F2> :NERDTreeToggle<cr>
@@ -78,8 +53,8 @@ map <F7> ms:%s /\<<C-R>=expand("<cword>")<CR>\>//gn<cr>`s
 map <silent> <F8> :BufExplorer<CR>
 "switch tab expand to space or not
 map <F9> :set expandtab!<cr>:set expandtab?<cr>
-"switch tab expand to space or not
-map <silent> <F10> :call Turntabstop()<cr>:set tabstop?<cr>
+"switch paste mode
+map <F10> :set paste!<cr>:set paste?<cr>
 ""comment visual line
 vnoremap <silent> , :call NERDComment(1, "alignLeft")<cr>
 "uncomment visual line
@@ -88,12 +63,16 @@ vnoremap <silent> . :call NERDComment(1, "uncomment")<cr>
 nnoremap <c-]> g<c-]>
 "move to right window
 noremap <c-l> <c-w>l
+noremap <c-Right> <c-w>l
 "move to up window
 noremap <c-k> <c-w>k
+noremap <c-Up> <c-w>l
 "move to down window
 noremap <c-j> <c-w>j
+noremap <c-Down> <c-w>j
 "move to left window
 noremap <c-h> <c-w>h
+noremap <c-Left> <c-w>h
 "goto the place where word definition
 nmap <C-[>g :cs find g <C-R>=expand("<cword>")<CR><CR>
 "list the funcion called by this function
