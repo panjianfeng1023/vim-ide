@@ -45,7 +45,7 @@
     * **replace**
         * **":%s /word1/word2/g":**  replace word1 to word2 in the file
     * **expand tab to space or not**
-        * **"F9":**          tab to space or not
+        * **"F9":**         expand tab to space or not
 
 
 ### Hope
@@ -56,7 +56,7 @@
 ### Faq
 
 * 怎么把光标移动到左边的文件树窗口或右边的函数列表窗口?
-    * ctrl-h是向左边的窗口移动,ctrl-l是向右边的窗口移动
+    * ctrl-left/ctrl-h是向左边的窗口移动,ctrl-right/ctrl-l是向右边的窗口移动
 * 问什么不让行号默认显示？
     * 右下角已经有了，不仅有行号，还有列号。
 * 按tab键默认输入4个空格还是一个tab?
