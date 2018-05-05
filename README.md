@@ -1,7 +1,7 @@
 ### Where use it
     
 * **system requirements：**vim 7.1 or higher，support linux、 mac、 cygwin.
-* **feature：**browse c/c++, python project and improve experience to modify config file
+* **feature：**read and write c/c++, python project and improve experience to modify config file
 * **difference：**one command to install and it's experience is as much as source insight.
 
 
@@ -26,8 +26,8 @@
         * **"F3":**         throught tagbar to jump to another function in the file
         * **"gd":**         jump to local varibale defination
         * **"ctrl-]":**     jump to variable or function defination in project。(can't jump to local variable defination) (:ts word)
-        * **"ctrl-left/ctrl-h":**     move cursor to left window in vim
-        * **"ctrl-right/ctrl-l":**     move cursor to right window in vim
+        * **"ctrl-left":**     move cursor to left window in vim
+        * **"ctrl-right":**     move cursor to right window in vim
     * **search**
         * **"ctrl-[ s":**   search variable or function in project (:cs find s word)
         * **"ctrl-[ t":**   search text in project (:cs find t word)
@@ -44,8 +44,6 @@
         * **".":**          uncomment selected code
     * **replace**
         * **":%s /word1/word2/g":**  replace word1 to word2 in the file
-    * **expand tab to space or not**
-        * **"F9":**         expand tab to space or not
 
 
 ### Hope
@@ -56,7 +54,7 @@
 ### Faq
 
 * 怎么把光标移动到左边的文件树窗口或右边的函数列表窗口?
-    * ctrl-left/ctrl-h是向左边的窗口移动,ctrl-right/ctrl-l是向右边的窗口移动
+    * ctrl-left是向左边的窗口移动,ctrl-right是向右边的窗口移动
 * 问什么不让行号默认显示？
     * 右下角已经有了，不仅有行号，还有列号。
 * 按tab键默认输入4个空格还是一个tab?
@@ -67,8 +65,6 @@
     * vim用这个配置文件时，F5快捷键会把ctags，cscope两个索引都更新了，不用再输入那两个命令了。
 * 打开一个工程，已经更F5新好索引，怎么跳转main函数？
     * :ts main
-* 怎么对齐nginx的配置文件？
-    * gg=G可以对其整个文件，但vim默认配置对齐后会让注释行没有缩进。用这个配置文件没有这个问题。
 * 为什么没有把youcompleteme集成进来？
     * 我的评估结果是，他的复杂度大于实用度。而且现在的补全我觉得已经太够用了。
 * diff命令或svn diff命令出来的东西没有语法着色？
@@ -86,7 +82,7 @@
     * nerdtree       #目录树（无修改，修改配置文件）
     * omnicpp        #C/C++的自动补全插件（无修改，修改配置文件）
     * bufexplorer    #当前打开的文件列表（无修改，修改配置文件）
-    * AutoComplPop   #自动弹出补全菜单 （无修改，无修改配置文件）
+    * AutoComplPop   #自动弹出补全菜单 （基于老版本修改，无修改配置文件）
 * 安装命令都做了什么？
     * 安装cscope, ctags, 然后下载一份vim脚本放在家目录下，最后清除临时文件。
 
