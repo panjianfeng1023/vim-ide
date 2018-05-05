@@ -37,7 +37,7 @@
         * **"F4":**         switch of include file and implement file
     * **display**
         * **"F6":**         switch of display invisible character or not 
-        * **"F10":**        change paste mode
+        * **"F9":**         change paste mode
 * **write c/c++ code：**
     * **comment**
         * **",":**          comment selected code
