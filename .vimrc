@@ -1,4 +1,3 @@
-set tags+=~/.vim/tags
 syntax on
 filetype plugin indent on
 set nocompatible                 "some plugin need it
@@ -35,7 +34,9 @@ let g:tagbar_compact=1
 let g:tagbar_foldlevel=1
 let g:tagbar_iconchars=['+', '-']
 let OmniCpp_SelectFirstItem = 2
+let OmniCpp_ShowPrototypeInAbbr = 1 
 let OmniCpp_MayCompleteScope = 1
+
 
 "file list
 map <silent> <F2> :NERDTreeToggle<cr>
@@ -51,10 +52,8 @@ map <F6> :set list!<cr>:set list?<cr>
 map <F7> ms:%s /\<<C-R>=expand("<cword>")<CR>\>//gn<cr>`s
 "swapfile list
 map <silent> <F8> :BufExplorer<CR>
-"switch tab expand to space or not
-map <F9> :set expandtab!<cr>:set expandtab?<cr>
 "switch paste mode
-map <F10> :set paste!<cr>:set paste?<cr>
+map <F9> :set paste!<cr>:set paste?<cr>
 ""comment visual line
 vnoremap <silent> , :call NERDComment(1, "alignLeft")<cr>
 "uncomment visual line
