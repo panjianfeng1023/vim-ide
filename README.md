@@ -1,6 +1,6 @@
 ### Summarize
     
-* **system requirements：** 
+* **requirements：** 
     * vim 7.1 or higher, support linux、mac、cygwin.
 * **feature：** 
     * read and write c/c++/python project.
@@ -47,40 +47,56 @@
 
 ### Hope
 
-* consuming less finger, less brain and less cpu to read and write code.
+* consuming less brain, less finger and less cpu to read and write code.
 
 
-### Links
-
-* vim offical website
-    * www.vim.org
-* offical vim scripts
-    * http://www.vim.org/scripts/index.php
-* wikipedia
-    * https://zh.wikipedia.org/wiki/Vim
-* baidu Encyclopedia
-    * http://baike.baidu.com/subview/113188/9338173.htm
+### 简介
+    
+* **系统要求：** 
+    * vim 7.1或以上，支持inux、mac、cygwin.
+* **用途：** 
+    * 阅读和编写c/c++/python项目.
+* **特点：** 
+    * 一个命令纯绿色安装
 
 
-### Faq
+### 安装与更新
 
-* 怎么把光标移动到左边的文件树窗口或右边的函数列表窗口?
-    * ctrl-left是向左边的窗口移动,ctrl-right是向右边的窗口移动
-* 按tab键默认输入4个空格还是一个tab?
-    * 4个空格。如果要求是tab,将配置文件中的set expandtab改为set noexpandtab。
-* tagbar怎么没有颜色了，默认的有。
-    * 给去掉了，tagbar如果有颜色，会在输入时运行正则表达式，自动补全会很慢。
-* 之前也用ctags、cscope,使用命令更新索引，这个F5更新索引与是用命令的区别是什么？
-    * vim用这个配置文件时，按F5和输入那两个命令的效果是一样的。
-* 为什么没有把youcompleteme集成进来？
-    * 我的评估结果是，他的复杂度大于实用度
-* 这个配置文件在搜索跳转补全等方面对c/c++/python支持怎么样？
-    * 非常好
-* 这份配置文件里用了哪些vim插件?
-    * tagbar
-    * nerdcommenter
-    * a
-    * nerdtree
-    * omnicpp
-    * bufexplorer
-    * autocomplpop
+* **centos, redhat, fedora:**
+    * yum install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
+* **debian, ubuntu:**
+    * apt-get install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
+
+
+### 使用说明
+
+* **打开项目:**
+    * 打开项目根目录，输入vim回车，然后按F2键打开文件列表.
+* **更新索引:**
+    * 第一次打开项目，按F5更新索引.(只有c/c++项目需要)
+* **关闭VIM:**
+    * F10
+* **阅读代码:**
+    * **跳转**
+        * **"F3":**         显示变量和函数列表，并可以跳转
+        * **"ctrl-]":**     跳转到函数或全局变量的定义
+        * **"ctrl-left":**  把光标移动到左边的窗口
+        * **"ctrl-right":** 把光标移动到右边的窗口
+    * **搜索**
+        * **"ctrl-[ s":**   在整个项目中搜索某个变量或函数 (只适用于c/c++)
+    * **打开项目里的另一个文件**
+        * **"F2":**         通过文件树
+        * **"F8":**         通过已打开的文件列表
+        * **"F4":**         切换头文件与实现文件
+    * **显示**
+        * **"F6":**         切换是否显示隐藏字符
+        * **"F7":**         高亮光标下单词
+* **编写代码：**
+    * **注释**
+        * **",":**          注释选中的代码
+        * **".":**          将选中的注释代码解注释
+
+
+### 愿景
+
+* 以更少的逻辑思维量，更少的手指运动量，并消耗更少的CPU来编写代码
