@@ -56,6 +56,8 @@ map <F7> ms:%s /\<<C-R>=expand("<cword>")<CR>\>//gn<cr>`s
 map <silent> <F8> :BufExplorer<CR>
 "switch paste mode
 map <F9> :set paste!<cr>:set paste?<cr>
+"switch paste mode
+map <10> :qa<cr>
 ""comment visual line
 vnoremap <silent> , :call NERDComment(1, "alignLeft")<cr>
 "uncomment visual line
