@@ -56,7 +56,7 @@ map <F7> ms:%s /\<<C-R>=expand("<cword>")<CR>\>//gn<cr>`s
 map <silent> <F8> :BufExplorer<CR>
 "switch paste mode
 map <F9> :set paste!<cr>:set paste?<cr>
-"switch paste mode
+"quit
 map <F10> :qa<cr>
 ""comment visual line
 vnoremap <silent> , :call NERDComment(1, "alignLeft")<cr>
@@ -69,7 +69,7 @@ noremap <c-l> <c-w>l
 noremap <c-Right> <c-w>l
 "move to up window
 noremap <c-k> <c-w>k
-noremap <c-Up> <c-w>l
+noremap <c-Up> <c-w>k
 "move to down window
 noremap <c-j> <c-w>j
 noremap <c-Down> <c-w>j
