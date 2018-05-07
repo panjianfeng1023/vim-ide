@@ -8,9 +8,9 @@
 
 ### Install And Update
 * **centos, redhat, fedora install command:**
-    * yum install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
+    * yum install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && rm ~/.vim && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
 * **debian, ubuntu install command:**
-    * apt-get install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
+    * apt-get install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && rm ~/.vim && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
 
 ### Do Project
 * **open project:**
@@ -52,9 +52,9 @@
 
 ### 安装与更新
 * **centos, redhat, fedora:**
-    * yum install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
+    * yum install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && rm ~/.vim && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
 * **debian, ubuntu:**
-    * apt-get install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
+    * apt-get install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && rm ~/.vim && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
 
 
 ### 使用说明
