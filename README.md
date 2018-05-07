@@ -3,7 +3,7 @@
 * **system requirements：** 
     * vim 7.1 or higher，support linux、 mac、 cygwin.
 * **feature：** 
-    * read and write c/c++, python project.
+    * read and write c/c++, python project.
 * **difference：** 
     * one command to install and it's experience is as much as source insight.
 
@@ -39,7 +39,7 @@
         * **"F4":**         switch of include file and implement file
     * **display**
         * **"F6":**         switch of display invisible character or not 
-        * **"F7":**         highlight word under the cursor
+        * **"F7":**         highlight word under the cursor
 * **write code：**
     * **comment**
         * **",":**          comment selected code
