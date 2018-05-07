@@ -1,8 +1,11 @@
 ### Where use it
     
-* **system requirements：** vim 7.1 or higher，support linux、 mac、 cygwin.
-* **feature：** read and write c/c++, python project and improve experience to modify config file
-* **difference：** one command to install and it's experience is as much as source insight.
+* **system requirements：** 
+    * vim 7.1 or higher，support linux、 mac、 cygwin.
+* **feature：** 
+    * read and write c/c++, python project and improve experience to modify config file
+* **difference：** 
+    * one command to install and it's experience is as much as source insight.
 
 
 ### How to install and update
@@ -72,11 +75,11 @@
 * 这份配置文件里用了哪些vim插件?
     * tagbar
     * nerdcommenter
-    * a
+    * a
     * nerdtree
     * omnicpp
     * bufexplorer
-    * AutoComplPop
+    * autocomplpop
 * 安装命令都做了什么？
     * 安装cscope, ctags, 然后下载一份vim脚本放在家目录下，最后清除临时文件。
 
