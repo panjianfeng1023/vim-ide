@@ -1,5 +1,7 @@
+set tags+=~/.vim/tags
 syntax on
 filetype plugin indent on
+set nu
 set nocompatible                 "some plugin need it
 set hlsearch                     "highlight the search
 set incsearch                    "move to fit position after one char input
@@ -24,7 +26,7 @@ set fileformats=unix,dos,mac     "line feed different in different mode
 set completeopt=menuone,longest
 
 highlight TagbarHighlight guifg=Green ctermfg=Green
-let NERDTreeQuitOnOpen=1
+"let NERDTreeQuitOnOpen=1
 let NERDTreeDirArrows=0
 let NERDTreeWinSize=40
 let NERDRemoveExtraSpaces=0
