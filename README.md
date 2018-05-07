@@ -1,8 +1,8 @@
 ### Where use it
     
-* **system requirements：**vim 7.1 or higher，support linux、 mac、 cygwin.
-* **feature：**read and write c/c++, python project and improve experience to modify config file
-* **difference：**one command to install and it's experience is as much as source insight.
+* **system requirements：** vim 7.1 or higher，support linux、 mac、 cygwin.
+* **feature：** read and write c/c++, python project and improve experience to modify config file
+* **difference：** one command to install and it's experience is as much as source insight.
 
 
 ### How to install and update
@@ -24,8 +24,7 @@
 * **read c/c++ code:**
     * **jump**
         * **"F3":**         throught tagbar to jump to another function in the file
-        * **"gd":**         jump to local varibale defination
-        * **"ctrl-]":**     jump to variable or function defination in project。(can't jump to local variable defination) (:ts word)
+        * **"ctrl-]":**     jump to non-local variable or function defination in project。 (:ts word)
         * **"ctrl-left":**     move cursor to left window in vim
         * **"ctrl-right":**     move cursor to right window in vim
     * **search**
@@ -37,13 +36,10 @@
         * **"F4":**         switch of include file and implement file
     * **display**
         * **"F6":**         switch of display invisible character or not 
-        * **"F9":**         change paste mode
 * **write c/c++ code：**
     * **comment**
         * **",":**          comment selected code
         * **".":**          uncomment selected code
-    * **replace**
-        * **":%s /word1/word2/g":**  replace word1 to word2 in the file
 
 
 ### Hope
@@ -51,14 +47,18 @@
 * consuming less finger, less brain and less cpu to read and write code.
 
 
+### Make Better
+
+* 如果能把nerdtree分栏，一部分显示nerdtree的内容，一部分显示已打开的文件就好了。
+* c/c++,python补全函数列表里没有显示函数的返回值。
+
+
 ### Faq
 
 * 怎么把光标移动到左边的文件树窗口或右边的函数列表窗口?
     * ctrl-left是向左边的窗口移动,ctrl-right是向右边的窗口移动
-* 问什么不让行号默认显示？
-    * 右下角已经有了，不仅有行号，还有列号。
 * 按tab键默认输入4个空格还是一个tab?
-    * 按tab键会输入4个空格，默认的行首缩进也是4个空格。如果项目要求是行首缩进是一个tab,将配置文件set expandtab改为set noexpandtab。
+    * 按tab键会输入4个空格。如果项目要求是行首缩进是一个tab,将配置文件set expandtab改为set noexpandtab。
 * tagbar怎么没有颜色了，默认的有？
     * 给去掉了，tagbar的颜色是会在文件输入时，时时运行正则表达式，会在自动补全时拖慢速度。
 * 之前也用ctags、cscope,使用命令更新索引，这个F5更新索引与是用命令的区别是什么？
@@ -67,22 +67,16 @@
     * :ts main
 * 为什么没有把youcompleteme集成进来？
     * 我的评估结果是，他的复杂度大于实用度。而且现在的补全我觉得已经太够用了。
-* diff命令或svn diff命令出来的东西没有语法着色？
-    * diff ***** | vim - 或
-    * svn diff **** | vim -
-    * 当然其他输出到终端的东西加上 | vim -也可以。
-    * '|'的意思是把上个命令的stdout，作为下一个命令的stdin。
-    * '-'的意思是把stdin作为一个文件打开
 * 这个配置文件在搜索跳转补全等方面对c++支持怎么样？
     * 非常好
-* 这份配置文件里用了哪些vim插件，这些插件是否是原生的?
-    * tagbar         #函数变量列表（修改部分BUG，修改配置文件）
-    * nerdcommenter  #注释功能（修改C语言默认用//注释，修改配置文件）
-    * a              #切换头文件和实现文件（修改跨目录不能找到的问题，无修改配置文件）
-    * nerdtree       #目录树（无修改，修改配置文件）
-    * omnicpp        #C/C++的自动补全插件（无修改，修改配置文件）
-    * bufexplorer    #当前打开的文件列表（无修改，修改配置文件）
-    * AutoComplPop   #自动弹出补全菜单 （基于老版本修改，无修改配置文件）
+* 这份配置文件里用了哪些vim插件?
+    * tagbar
+    * nerdcommenter
+    * a
+    * nerdtree
+    * omnicpp
+    * bufexplorer
+    * AutoComplPop
 * 安装命令都做了什么？
     * 安装cscope, ctags, 然后下载一份vim脚本放在家目录下，最后清除临时文件。
 
@@ -102,16 +96,6 @@
     * 快速提高 Vi/Vim 使用效率的原则与途径   http://www.ibm.com/developerworks/cn/linux/l-cn-tip-vim/
     * 鸟哥 第九章、vim 程式編輯器            http://linux.vbird.org/linux_basic/0310vi.php
     * 高效率编辑器 VIM－操作篇               https://linuxtoy.org/archives/efficient-editing-with-vim.html
-* 与这个项目类似功能的项目会配置文件说明
-    * use_vim_as_ide                      https://github.com/yangyangwithgnu/use_vim_as_ide
-    * 超强vim配置文件                     https://github.com/ma6174/vim
-    * Vim as a Python IDE                 https://github.com/mbrochh/vim-as-a-python-ide
-    * 强大的vim配置文件,让编程更随意      http://www.cnblogs.com/ma6174/archive/2011/12/10/2283393.html
-    * 史上最强的Vim 配置文件              http://blog.csdn.net/redguardtoo/article/details/1172136
-    * 我的VIM配置及说明K-VIM              http://www.wklken.me/posts/2013/06/11/linux-my-vim.html
-    * Vim配置文件全平台可用               http://www.oschina.net/code/snippet_103341_10313
-    * 将你的Vim 打造成轻巧强大的IDE  http://yuez.me/jiang-ni-de-vim-da-zao-cheng-qing-qiao-qiang-da-de-ide/
-    * vim 配置文件                        http://blog.sciencenet.cn/blog-683919-667321.html
 * 百科类vim说明
     * 维基百科             https://zh.wikipedia.org/wiki/Vim
     * 百度百科             http://baike.baidu.com/subview/113188/9338173.htm
