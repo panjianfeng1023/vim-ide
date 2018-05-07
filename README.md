@@ -1,5 +1,4 @@
 ### Summarize
-    
 * **requirements：** 
     * vim 7.1 or higher, support linux、mac、cygwin.
 * **feature：** 
@@ -7,17 +6,13 @@
 * **difference：** 
     * one command to install and it's pure green
 
-
 ### Install And Update
-
 * **centos, redhat, fedora install command:**
     * yum install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
 * **debian, ubuntu install command:**
     * apt-get install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
 
-
 ### Do Project
-
 * **open project:**
     * cd into project root dir,vim (press enter). press F2 to open file tree.
 * **update index:**
@@ -44,14 +39,10 @@
         * **",":**          comment selected code
         * **".":**          uncomment selected code
 
-
 ### Hope
-
 * consuming less brain, less finger and less cpu to read and write code.
 
-
 ### 简介
-    
 * **系统要求：** 
     * vim 7.1或以上，支持inux、mac、cygwin.
 * **用途：** 
@@ -59,9 +50,7 @@
 * **特点：** 
     * 一个命令纯绿色安装
 
-
 ### 安装与更新
-
 * **centos, redhat, fedora:**
     * yum install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
 * **debian, ubuntu:**
@@ -69,7 +58,6 @@
 
 
 ### 使用说明
-
 * **打开项目:**
     * 打开项目根目录，输入vim回车，然后按F2键打开文件列表.
 * **更新索引:**
@@ -96,7 +84,5 @@
         * **",":**          注释选中的代码
         * **".":**          将选中的注释代码解注释
 
-
 ### 愿景
-
 * 以更少的逻辑思维量，更少的手指运动量，并消耗更少的CPU来编写代码
