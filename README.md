@@ -14,19 +14,17 @@
 
 ### Do Project
 * **open project:**
-    * cd into project root dir,vim (press enter). press F2 to open file tree.
+    * cd into project root dir,vim (press enter). press F2 to open ide mode.
 * **update index:**
     * when first time open project, press F5 to update index.(only in c/c++)
 * **custom function:**
-    * **"F2":** open file tree
-    * **"F3":** display variable and function list
+    * **"F2":** open ide mode
     * **"F4":** switch include file and implement file
     * **"F5":** update index
     * **"F6":** display invisible character or not 
     * **"F7":** highlight word under the cursor
-    * **"F8":** opened file list
     * **"F9":** set paste!
-    * **"F10":** display variable and function list
+    * **"F10":** quit vim
     * **",":** comment selected code
     * **".":** uncomment selected code
     * **"ctrl-left":** move cursor to left window in vim
@@ -54,17 +52,15 @@
 
 ### 使用说明
 * **打开项目:**
-    * 打开项目根目录，输入vim回车，然后按F2键打开文件列表.
+    * 打开项目根目录，输入vim回车，然后按F2键ide模式.
 * **更新索引:**
     * 第一次打开项目，按F5更新索引.(只有c/c++项目需要)
 * **定制功能:**
-    * **"F2":** 打开文件树
-    * **"F3":** 显示变量和函数列表
+    * **"F2":** 打开ide模式
     * **"F4":** 切换头文件与实现文件
     * **"F5":** 更新索引
     * **"F6":** 切换是否显示隐藏字符
     * **"F7":** 高亮光标下单词
-    * **"F8":** 已打开的文件列表
     * **"F9":** set paste!
     * **"F10":** 退出vim
     * **",":** 注释选中的代码
