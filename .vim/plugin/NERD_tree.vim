@@ -3254,17 +3254,17 @@ function! s:renderView()
     "delete all lines in the buffer (being careful not to clobber a register)
     silent 1,$delete _
 
-    call s:dumpHelp()
+    "call s:dumpHelp()
 
-    "delete the blank line before the help and add one after it
-    if g:NERDTreeMinimalUI == 0
-        call setline(line(".")+1, "")
-        call cursor(line(".")+1, col("."))
-    endif
+    ""delete the blank line before the help and add one after it
+    "if g:NERDTreeMinimalUI == 0
+    "    call setline(line(".")+1, "")
+    "    call cursor(line(".")+1, col("."))
+    "endif
 
-    if b:NERDTreeShowBookmarks
-        call s:renderBookmarks()
-    endif
+    "if b:NERDTreeShowBookmarks
+    "    call s:renderBookmarks()
+    "endif
 
     "add the 'up a dir' line
     if !g:NERDTreeMinimalUI
