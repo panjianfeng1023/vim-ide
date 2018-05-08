@@ -1,7 +1,6 @@
 set tags+=~/.vim/tags
 syntax on
 filetype plugin indent on
-set nu
 set nocompatible                 "some plugin need it
 set hlsearch                     "highlight the search
 set incsearch                    "move to fit position after one char input
@@ -24,13 +23,13 @@ set backspace=indent,eol,start   "better backspace
 set fileencodings=utf-8,cp936    "auto test the file is uft-8 or cp936
 set fileformats=unix,dos,mac     "line feed different in different mode
 set completeopt=menuone,longest
+set pastetoggle=<F9>
 
 highlight TagbarHighlight guifg=Green ctermfg=Green
-"let NERDTreeQuitOnOpen=1
+let NERDTreeHighlightCursorline = 0
 let NERDTreeDirArrows=0
 let NERDTreeWinSize=40
 let NERDRemoveExtraSpaces=0
-let g:bufExplorerDisableDefaultKeyMapping = 1
 let g:tagbar_sort=0
 let g:tagbar_compact=1
 let g:tagbar_foldlevel=1
@@ -39,61 +38,68 @@ let OmniCpp_SelectFirstItem = 2
 let OmniCpp_ShowPrototypeInAbbr = 1 
 let OmniCpp_MayCompleteScope = 1
 
+let g:bufExplorerDefaultHelp = 0
+let g:bufExplorerShowRelativePath = 1
+let g:bufExplorerDisableDefaultKeyMapping = 1
+let g:winManagerWindowLayout='NERDTree|BufExplorer'
+let g:winManagerWidth=40
+let g:persistentBehaviour = 0
+
+let g:NERDTree_title = "[NERDTree]"
+function! NERDTree_Start()
+    exe 'q'
+    exe 'NERDTree'
+endfunction
+
+function! NERDTree_IsValid()
+    return 1
+endfunction
+
 
 "file list
-map <silent> <F2> :NERDTreeToggle<cr>
+map <silent> <F2> :WMToggle<cr>:TagbarToggle<cr><c-w>l
+imap <silent> <F2> <esc>:WMToggle<cr>:TagbarToggle<cr><c-w>li
 "tarbar functon list
-map <silent> <F3> :TagbarToggle<cr>
-"header and implement file switch
 map <F4> :A<cr>
+imap <F4> <esc>:A<cr>a
 "update index
 map <F5> :!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q<cr><cr>:cs kill cscope.out<cr>:!cscope -Rb<cr><cr>:cs add cscope.out<cr>
+imap <F5> <esc>:!ctags -R --c++-kinds=+p --fields=+iaS --extra=+q<cr><cr>:cs kill cscope.out<cr>:!cscope -Rb<cr><cr>:cs add cscope.out<cr>i
 "switch display invisable char or not
-map <F6> :set list!<cr>:set list?<cr>
+map <F6> :set list!<cr>
+imap <F6> <esc>:set list!<cr>a
 "highlight
 map <F7> ms:%s /\<<C-R>=expand("<cword>")<CR>\>//gn<cr>`s
-"swapfile list
-map <silent> <F8> :BufExplorer<CR>
-"switch paste mode
-map <F9> :set paste!<cr>:set paste?<cr>
+imap <F7> <esc>ms:%s /\<<C-R>=expand("<cword>")<CR>\>//gn<cr>`sa
 "quit
 map <F10> :qa<cr>
-""comment visual line
+imap <F10> <esc>:qa<cr>
+"comment visual line
 vnoremap <silent> , :call NERDComment(1, "alignLeft")<cr>
 "uncomment visual line
 vnoremap <silent> . :call NERDComment(1, "uncomment")<cr>
 "show list if more tag 
 nnoremap <c-]> g<c-]>
 "move to right window
-noremap <c-l> <c-w>l
 noremap <c-Right> <c-w>l
+inoremap <c-Right> <esc><c-w>l
 "move to up window
-noremap <c-k> <c-w>k
 noremap <c-Up> <c-w>k
+inoremap <c-Up> <esc><c-w>k
 "move to down window
-noremap <c-j> <c-w>j
 noremap <c-Down> <c-w>j
+inoremap <c-Down> <esc><c-w>j
 "move to left window
-noremap <c-h> <c-w>h
 noremap <c-Left> <c-w>h
-"goto the place where word definition
-nmap <C-[>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-"list the funcion called by this function
-nmap <C-[>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-"list the position where to call this word
-nmap <C-[>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+inoremap <c-Left> <esc><c-w>h
 "search word in the project
 nmap <C-[>s :cs find s <C-R>=expand("<cword>")<CR><CR>
 "search word in the project and the word can be in text
 nmap <C-[>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-"search word in the project and the word can be in text, support regex
-nmap <C-[>e :cs find e <C-R>=expand("<cword>")<CR><CR>
 "list the file which filename is this word
 nmap <C-[>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-"list the file include the file which filename is this word
-nmap <C-[>i :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
 "list the file which include this file
-nmap <C-[>I :cs find i <C-R>=expand("%:t")<CR><CR>
+nmap <C-[>i :cs find i <C-R>=expand("%:t")<CR><CR>
 
 if has("cscope") 
     set nocsverb
