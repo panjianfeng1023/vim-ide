@@ -31,10 +31,8 @@
     * **"ctrl-right":** move cursor to right window in vim
     * **"ctrl-]":** jump to function or non-local variable defination
     * **"ctrl-[ s":** search variable or function in project (only in c/c++)
-
-### Hope
-* consuming less brain, less finger and less cpu to read and write code.
-
+ 
+       
 ### 简介
 * **系统要求：** 
     * vim 7.1或以上，支持inux、mac、cygwin.
@@ -49,10 +47,9 @@
 * **debian, ubuntu:**
     * apt-get install ctags cscope wget unzip -y && wget https://github.com/langsim/vim-ide/archive/master.zip -O master.zip && unzip -o master.zip && rm -rf ~/.vim && \cp -rf vim-ide-master/.vim* ~ ; rm -rf master.zip vim-ide-master
 
-
 ### 使用说明
 * **打开项目:**
-    * 打开项目根目录，输入vim回车，然后按F2键ide模式.
+    * 打开项目根目录，输入vim回车，然后按F2键进入ide模式.
 * **更新索引:**
     * 第一次打开项目，按F5更新索引.(只有c/c++项目需要)
 * **定制功能:**
@@ -69,7 +66,3 @@
     * **"ctrl-right":** 把光标移动到右边的窗口    
     * **"ctrl-]":** 跳转到函数或全局变量的定义
     * **"ctrl-[ s":** 在整个项目中搜索某个变量或函数 (只适用于c/c++)
-
-
-### 愿景
-* 以更少的逻辑思维量，更少的手指运动量，并消耗更少的CPU来编写代码
