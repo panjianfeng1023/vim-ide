@@ -24,6 +24,7 @@ set fileencodings=utf-8,cp936    "auto test the file is uft-8 or cp936
 set fileformats=unix,dos,mac     "line feed different in different mode
 set completeopt=menuone,longest
 set pastetoggle=<F9>
+set complete=.,w,b,k
 
 highlight TagbarHighlight guifg=Green ctermfg=Green
 let NERDTreeHighlightCursorline = 0
