@@ -23,8 +23,6 @@
     * **"F5":** update index
     * **"F6":** display invisible character or not 
     * **"F7":** highlight word under the cursor
-    * **"F9":** set paste!
-    * **"F10":** quit vim
     * **",":** comment selected code
     * **".":** uncomment selected code
     * **"ctrl-left":** move cursor to left window in vim
@@ -58,8 +56,6 @@
     * **"F5":** 更新索引
     * **"F6":** 切换是否显示隐藏字符
     * **"F7":** 高亮光标下单词
-    * **"F9":** set paste!
-    * **"F10":** 退出vim
     * **",":** 注释选中的代码
     * **".":** 将选中的注释代码解注释
     * **"ctrl-left":** 把光标移动到左边的窗口
