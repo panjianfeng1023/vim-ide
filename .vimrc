@@ -15,7 +15,8 @@ set updatetime=200               "tagbar response 800ms
 set showmatch matchtime=0        "show the other bracket
 set wmnu wildmode=longest:full   "when in command mode can use auto complete same as bash
 set expandtab tabstop=4          "expand the tab to 4 space
-set si ai ci cinkeys-=0# cinoptions=g0,:0   "some indent rules
+set si ai ci cinkeys-=0# 
+set cinoptions=g0,:0             "some indent rules
 set shiftwidth=4                 "make the indent 4 length
 set softtabstop=4                "backspace can del 4 space
 set lcs=eol:$,tab:\|\            "display tab to green line
