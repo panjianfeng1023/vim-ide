@@ -1,6 +1,6 @@
-Already stop update, my new vim script file move to https://github.com/langsim/notepad-ken.git, the new script file dont't need esc button to use as a code editor and optimized the shortcut key.
+Already stop update, my new vim script file move to https://github.com/langsim/vim-pretty, the new script file dont't need esc button to use as a code editor and optimized the shortcut key.
 
-已经停止更新,自用的vim配置文件移至https://github.com/langsim/notepad-ken.git, 与这个的区别是那个不需要按esc键就可以实现和这个项目基本相同的功能，同时优化了快捷键排布。
+已经停止更新,自用的vim配置文件移至https://github.com/langsim/vim-pretty, 与这个的区别是那个不需要按esc键就可以实现和这个项目基本相同的功能，同时优化了快捷键排布。
 
 ### Summarize
 * **requirements：** 
